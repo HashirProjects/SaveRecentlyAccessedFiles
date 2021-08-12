@@ -36,6 +36,9 @@ class RecentsDBEditor(object):
 		for i in range(self.recentsListLength):
 			print(f"{i}) {self.recentsList[i]}")
 
+	def getFileFromDB(self, index):
+		return self.recentsList[int(index)]
+
 #some shortcuts:
 
 def saveToRecentsDBDecorator(func, listPath):
